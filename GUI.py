@@ -16,11 +16,14 @@ def load_img():
     global imL1
 
     im_path = askopenfilename()
-    im1 = Image.open(im_path)
-    im1.thumbnail((588, 337))
-    render = ImageTk.PhotoImage(im1)
-    imL1.configure(image=render)
-    imL1.image = render
+
+    if im_path != '':
+
+        im1 = Image.open(im_path)
+        im1.thumbnail((588, 337))
+        render = ImageTk.PhotoImage(im1)
+        imL1.configure(image=render)
+        imL1.image = render
 
 
 # Classification is done here
