@@ -18,7 +18,7 @@ def largest_cont(conts):
 
 
 def fourier_dsc(conts, cont_ind):
-    fdf = []
+    # fdf = []
 
     pixels = len(conts[cont_ind])
 
@@ -39,10 +39,6 @@ def fourier_dsc(conts, cont_ind):
         coord.append(conts[cont_ind][i][0][0] + 1j * conts[cont_ind][i][0][1])
 
     fdf = fft.fftn(coord)
-
-    """for x in range(0, pixels):  # todo test
-        if abs(fdf[x]) < 0.00000000000000000000000001:
-            fdf[x] = 0"""
 
     # print('Fourier Descriptors:', len(fdf), '\n', fdf)
 
